@@ -4,7 +4,7 @@ Much thanks for the efforts of Bear software and @rcvd.
 
 But the theme has some problems (mainly two, shown as below):
 1. Fail to show code block line number correctly;
-2. The repo-name and footer are not visial when your mouse is not there;
+2. The repo-name and footer are not visible when your mouse is not there;
 
 <img width="1512" height="888" alt="image" src="https://github.com/user-attachments/assets/fdd02684-99dd-4dc7-baa8-bbecbb9dcffc" />
 
