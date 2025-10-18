@@ -1,0 +1,100 @@
+@import url('https://rcvd.github.io/logseq-bear-theme/bear.css');
+
+/* 修复Graph显示 */
+/* 默认：透明底、文字灰 */
+a.item.group.flex.items-center.p-2.text-sm.font-medium.rounded-md {
+  background-color: transparent !important;
+  transition: background-color .15s ease, color .15s ease;
+}
+a.item.group.flex.items-center.p-2.text-sm.font-medium.rounded-md
+  #repo-name > .overflow-hidden.text-ellipsis {
+  color: #bfbfbf !important;
+}
+
+/* 悬停：底色 #db4d4f，文字改为 #2e3234（或 #fff 自行选择） */
+a.item.group.flex.items-center.p-2.text-sm.font-medium.rounded-md:hover {
+  background-color: #db4d4f !important;
+}
+a.item.group.flex.items-center.p-2.text-sm.font-medium.rounded-md:hover
+  #repo-name > .overflow-hidden.text-ellipsis {
+  color: #fff !important;   /* 想更清晰可用 #fff */
+}
+
+/* 修复新页面显示 */
+/* 默认 */
+footer a > .ui__icon + .flex-1 {
+  color: #bfbfbf !important;
+  transition: color .15s ease, background-color .15s ease;
+}
+
+/* 悬停：背景 #db4d4f，文字保持 #2e3234（你之前选的） */
+footer a:hover {
+  background-color: #db4d4f !important;
+  border-radius: 8px;          /* 可选 */
+}
+footer a:hover > .ui__icon + .flex-1 {
+  color: #fff !important;
+}
+
+/* 按需修改引用块字体和大小 */
+blockquote,
+blockquote .is-paragraph {
+  font-size: 0.9rem;
+  font-family: Fern, Neuton, Georgia, 'Times New Roman', serif !important;
+  line-height: 1.5;       /* 可调，Neuton 行高略紧 */
+}
+
+blockquote {
+  background: #fff;              /* 或 background-color */
+  color: inherit;                /* 文字颜色保持不变 */
+}
+
+/* 修改行内代码（非 code block） */
+:where(:not(pre) > code) {
+  font-size: 0.9rem;
+  font-family: "Maple Mono Normal", 'Jetbrains Mono', "Maple Mono Normal Light", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !important;
+}
+
+/* 修改代码块 */
+pre, pre code {
+  font-size: 0.9rem;
+  font-family: "Maple Mono Normal", 'Jetbrains Mono', "Maple Mono Normal Light", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !important;
+}
+
+/* 修复代码块行号显示错误 */
+/* 行号 gutter 宽度 */
+.CodeMirror-gutter.CodeMirror-linenumbers { width: 30px !important; }
+
+/* 代码内容与 gutter 对齐 */
+.CodeMirror-sizer { margin-left: 30px !important; }
+
+/* 行号元素占满 gutter，右对齐并留出与代码的间距 */
+.CodeMirror-gutter-elt {
+  left: 0 !important;
+  width: 100% !important;
+  text-align: right;
+  padding-right: 8px;   /* 调整数字与代码之间的空隙 */
+}
+
+/* 边栏菜单字体的一些简单修改 */
+#left-sidebar .nav-header > div a span {
+  font-size: 0.95rem;
+}
+
+/* 只作用于标题容器里的文字 */
+.title-wrap {
+  font-size: 0.9rem !important;   /* 改成你想要的大小，如 16/18/20px */
+  line-height: 1.4;              /* 视视觉效果微调 */
+}
+
+/* 如果 title-wrap 里有图标，防止被一起放大（可选） */
+.title-wrap :is(.ui__icon, .icon) {
+  font-size: 1em;   /* 或单独指定尺寸 */
+  font-family: inherit;
+}
+
+b.leading-none { font-size: 0.9rem !important; }
+
+.left-sidebar-inner .nav-content-item .bd ul a .page-title {
+  font-size: 0.9rem;
+}
